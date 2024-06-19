@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.exam1.Controller" spacing="10" alignment="CENTER">
+    <Label text="Diagnosis Management System" style="-fx-font-size: 24px;"/>
+    <Label text="Name: Nitin Nitin, Student ID: 200567991" style="-fx-font-size: 12px;"/>
+
+    <HBox spacing="10">
+        <VBox spacing="10">
+            <Label text="Patient ID:"/>
+            <TextField fx:id="patientIdField"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Patient Name:"/>
+            <TextField fx:id="patientNameField"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Diagnosis:"/>
+            <TextField fx:id="diagnosisField"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Symptoms:"/>
+            <TextField fx:id="symptomsField"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Medicines:"/>
+            <TextField fx:id="medicinesField"/>
+        </VBox>
+        <VBox spacing="10">
+            <Label text="Date:"/>
+            <DatePicker fx:id="dateField"/>
+        </VBox>
+    </HBox>
+
+    <HBox spacing="10">
+        <Button text="Add" onAction="#addDiagnosis"/>
+        <Button text="Search" onAction="#searchDiagnoses"/>
+    </HBox>
+
+    <TableView fx:id="tableView">
+        <columns>
+            <TableColumn fx:id="patientIdColumn" text="Patient ID"/>
+            <TableColumn fx:id="patientNameColumn" text="Patient Name"/>
+            <TableColumn fx:id="diagnosisColumn" text="Diagnosis"/>
+            <TableColumn fx:id="symptomsColumn" text="Symptoms"/>
+            <TableColumn fx:id="medicinesColumn" text="Medicines"/>
+            <TableColumn fx:id="dateColumn" text="Date"/>
+        </columns>
+    </TableView>
+</VBox>
